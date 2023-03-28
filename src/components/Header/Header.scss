@@ -1,0 +1,236 @@
+.header {
+  background-color: rgba(51, 51, 51, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  animation: fade-in 0.5s ease-in-out;
+
+  &.noscrolled {
+    .logo {
+      transform-origin: center center;
+      animation: upspin 1.5s 1 forwards;
+      cursor: pointer;
+    }
+  }
+
+  &.scrolled {
+    animation: anim 1s 1 ease-out;
+    animation-fill-mode: forwards;
+
+    .logo {
+      transform-origin: center center;
+      animation: spin 1.5s 1 forwards;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  @keyframes anim {
+    0% {
+      background-color: rgba(51, 51, 51, 1);
+    }
+    100% {
+      background-color: rgba(51, 51, 51, 0);
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: translate(-115%, 0%);
+    }
+  }
+
+  @keyframes upspin {
+    from {
+      transform: translate(-115%, 0%);
+      opacity: 0;
+    }
+    15% {
+      opacity: 0.5;
+    }
+    25% {
+      transform: translate(-125%, 0%);
+      opacity: 1;
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+
+    .logo {
+      cursor: pointer;
+
+      img {
+        width: 55px;
+        height: 55px;
+      }
+    }
+    .burger {
+      display: none;
+    }
+    .menu {
+      position: relative;
+      
+      .menu-list {
+        display: flex;
+        gap: 38px;
+
+        .menu-item {
+          .menu-link {
+            font-size: 14px;
+            cursor: pointer;
+            animation: fade-in 1.5s ease-in-out;
+
+            &:hover {
+              color: #56b26f;
+              transition: color 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    animation: none;
+
+    &.scrolled {
+      animation: none;
+      animation-fill-mode: none;
+
+      @keyframes anim2 {
+        0% {
+          background-color: rgba(51, 51, 51, 1);
+        }
+        100% {
+          background-color: rgba(51, 51, 51, 0.7);
+        }
+      }
+    }
+
+    .container {
+      padding: 4px 0;
+
+      .logo {
+        display: flex;
+        transform-origin: center center;
+        animation: none;
+      }
+
+      .burger {
+        display: flex;
+
+        .button_menu {
+          position: relative;
+          width: 45px;
+          height: 30px;
+          border: none;
+          background-color: transparent;
+          z-index: 20;
+          cursor: pointer;
+
+          span {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            background-color: #ffffff;
+            height: 3px;
+            transition: 0.3s ease;
+          }
+
+          span:nth-child(1) {
+            top: 5px;
+          }
+          span:nth-child(2) {
+            top: 15px;
+          }
+          span:nth-child(3) {
+            top: 15px;
+          }
+          span:nth-child(4) {
+            top: 25px;
+          }
+        }
+      }
+
+      .menu {
+        &.open {
+          animation: fade-in 0.3s forwards;
+
+          .menu-list {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.97);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+
+            .menu-item {
+              .menu-link {
+                font-size: 32px;
+              }
+            }
+
+            .button_menu {
+              .btn_line:nth-child(1) {
+                transform: scaleX(0);
+              }
+              .btn_line:nth-child(2) {
+                transform: rotate(45deg);
+              }
+              .btn_line:nth-child(3) {
+                transform: rotate(-45deg);
+              }
+              .btn_line:nth-child(4) {
+                transform: scaleX(0);
+              }
+            }
+          }
+        }
+      }
+
+      .menu {
+        display: flex;
+        .menu-list {
+          display: none;
+        }
+      }
+    }
+  }
+}

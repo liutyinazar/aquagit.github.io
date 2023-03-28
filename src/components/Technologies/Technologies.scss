@@ -1,0 +1,124 @@
+.technologies {
+  background-color: rgba(0, 0, 0, 0.88);
+  padding: 80px 0;
+
+  .tech_wrapper {
+    text-align: center;
+
+    .tech {
+      display: flex;
+      justify-content: center;
+      gap: 4vh;
+      padding-top: 40px;
+      flex-wrap: wrap;
+
+      .tech_block {
+        background-color: rgba(255, 255, 255, 0.01);
+        height: 180px;
+        width: 200px;
+        padding: 40px 0;
+        border-radius: 25px;
+        cursor: pointer;
+        position: relative;
+
+        .tech_item {
+          font-size: 24px;
+        }
+
+        ul {
+          opacity: 0;
+        }
+
+        img {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          opacity: 1;
+          transition: opacity .4s ease-out;
+        }
+
+        h3 {
+          position: absolute;
+          top: 80%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding-top: 5px;
+
+          opacity: 1;
+          transition: opacity .4s ease-out;
+        }
+
+        &:hover {
+          img,
+          h3 {
+            opacity: 0;
+
+          }
+
+          ul {
+            opacity: 1;
+            transition: opacity .4s ease-out;
+
+            li {
+              padding-bottom: 3px;
+            }
+          }
+        }
+      }
+    }
+    .tech_title {
+      text-align: center;
+      position: relative;
+      padding-bottom: 4vh;
+
+      h1 {
+        font-size: 4vh;
+        letter-spacing: 1px;
+        font-weight: 800;
+      }
+
+      span {
+        position: absolute;
+        top: 64px;
+        height: 2px;
+        transform: translateX(-50%);
+        width: 15%;
+        background-color: #56b26f;
+        transition: width 1s ease;
+      }
+
+      &:hover {
+        span {
+          width: 30%;
+          transition: width 1s ease;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .tech_title {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .technologies {
+    .tech_wrapper {
+      .tech {
+        .tech_block {
+          width: 40%;
+          padding: 22px 4px 24px;
+          .tech_item {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
