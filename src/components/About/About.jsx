@@ -1,16 +1,10 @@
 import "./About.scss";
 import about from "../assets/images/about_image.jpg";
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Link } from "react-scroll";
 
 const About = () => {
-  const [, setIsOpen] = useState(false);
-
-  const handleLinkClick = () => {
-    setIsOpen(false); // закрываем меню при клике на ссылку
-  };
-
   return (
     <div className="about">
       <div className="border">
@@ -20,27 +14,24 @@ const About = () => {
               <h1>What is Xedrum?</h1>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque voluptate molestias nostrum quaerat fugit pariatur
-              necessitatibus rerum ad, quam minima. Eos dicta possimus
-              architecto explicabo perferendis voluptas veritatis laudantium
-              voluptatem!Lorem Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed nam veritatis distinctio ipsum officia, a
-              aspernatur magnam rerum odit ea aperiam vel modi culpa! Ullam at
-              expedita debitis eaque amet?
+              Xedrum is a team of highly skilled developers and managers. Each
+              team member has a lot of experience in developing and
+              implementing/integrating different systems. We are always happy to
+              help with developing any solutions you needed. The whole team is
+              located in the safest city in Ukraine - Lviv, so you shouldn't
+              care about our durability 🇺🇦.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Doloremque voluptate molestias nostrum quaerat fugit pariatur
-              necessitatibus rerum ad, quam minima. Eos dicta possimus
-              architecto explicabo perferendis voluptas veritatis laudantium
-              voluptatem!Lorem Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sed nam veritatis distinctio ipsum officia, a
-              aspernatur magnam rerum odit ea aperiam vel modi culpa! Ullam at
-              expedita debitis eaque amet?
+              Our main point is to follow and help a client during the whole
+              cooperation from the concept to the final solution with the
+              following maintenance/support. Also, we work with existing systems
+              to slightly implement new features and support for the future. Our
+              team with huge expertise in different scopes can easily
+              investigate an existing solution and develop it on the spot.
             </p>
           </div>
+
           <div className="about_image">
             <img src={about} alt="about1" />
             <div className="about_image_items">
@@ -49,13 +40,10 @@ const About = () => {
                 <h1>For our customers</h1>
               </div>
               <div className="about_image_btn">
-                <Link
-                  to="works"
-                  smooth={true}
-                  duration={50}
-                  onClick={handleLinkClick}
-                >
-                  <button className="main_btn">Our works</button>
+                <Link to="works" smooth={true} duration={50}>
+                  <button href="/" className="main_btn">
+                    Our works
+                  </button>
                 </Link>
               </div>
             </div>

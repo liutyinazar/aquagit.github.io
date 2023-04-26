@@ -141,10 +141,16 @@
 
 @media (max-width: 900px) {
   .contact {
+
+    .contact_title {
+      span {
+        display: none;
+      }
+    }
     .contact_wrapper {
       text-align: center;
+      justify-content: center;
       .contact_form {
-        width: 100%;
         margin: 0 80px;
       }
       .contact-info {

@@ -1,6 +1,6 @@
 .technologies {
   background-color: rgba(0, 0, 0, 0.88);
-  padding: 80px 0;
+  padding: 8vh 8vh;
 
   .tech_wrapper {
     text-align: center;
@@ -9,7 +9,7 @@
       display: flex;
       justify-content: center;
       gap: 4vh;
-      padding-top: 40px;
+      padding-top: 4vh;
       flex-wrap: wrap;
 
       .tech_block {
@@ -74,14 +74,14 @@
       padding-bottom: 4vh;
 
       h1 {
-        font-size: 4vh;
-        letter-spacing: 1px;
+        font-size: 50px;
+        letter-spacing: .3px;
         font-weight: 800;
       }
 
       span {
         position: absolute;
-        top: 64px;
+        top: 4em;
         height: 2px;
         transform: translateX(-50%);
         width: 15%;

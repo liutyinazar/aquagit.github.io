@@ -15,7 +15,7 @@ const Main = () => {
       <div className="border">
         <div className="main_wrapper">
           <div className="main_title">
-            <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h1>
+            <h1>Our clients discover some surprise benefits of doing business with us they did not expect</h1>
           </div>
           <Link
             to="contact"

@@ -75,7 +75,7 @@ const Contact = () => {
         <div className="contact_title">
           <h1>Contact Us</h1>
           <span></span>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+          <p>Write to us and we will respond to you soon!</p>
         </div>
         <div className="contact_wrapper">
           <form onSubmit={handleSubmit} className="contact_form">
